@@ -16,12 +16,13 @@ public class MyPQUnsortedArray<K,V> extends AbstractPQ<K,V>{
     }
     public boolean insert(K,V){
         if((size + 1) > array.length){
-            
+
         }
     }
 
-    public removeMin(){
+    public Entry removeMin(){
         
     }
+
 
 }

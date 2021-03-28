@@ -1,4 +1,4 @@
-public class MyPQUnsortedList<K,V> implements MyPQ
+public class MyPQUnsortedList<K,V> extends AbstractPQ<K,V>
 {
 
 

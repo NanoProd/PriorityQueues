@@ -1,3 +1,7 @@
+import java.lang.IllegalArgumentException;
+import java.util.Comparator;
+import DataTypes.DefaultComparator;
+
 public abstract class AbstractPQ<K,V> implements MyPQ<K,V>
 {
     //nested entry class
@@ -42,12 +46,12 @@ public abstract class AbstractPQ<K,V> implements MyPQ<K,V>
         return comp.compare(a.getKey(), b.getKey());
     }
     //determines whether a key is valid
-    protected boolean checkKey(K key) throws illegalArgumentException{
+    protected boolean checkKey(K key) throws IllegalArgumentException{
         try {
             return (comp.compare(key,key) == 0); //see if key can be compared to itself
         } catch (Exception e) {
             //TODO: handle exception
-            throw new illegalArgumentException("Invalid key");
+            throw new IllegalArgumentException("Invalid key");
         }
     }
 
