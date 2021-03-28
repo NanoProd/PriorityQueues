@@ -33,12 +33,12 @@ public abstract class AbstractPQ<K,V> implements MyPQ<K,V>
     private Comparator<K> comp;
 
     //constructor, initializes empty priority queue
-    protected AbstractPQ(Comparator<K> comp){
-        this.comp = comp;
+    protected AbstractPQ(Comparator<K> Comparator){
+        this.comp = Comparator;
     }
     //default constructor with default comparator
     protected AbstractPQ(){
-        this(new DefaultComparator<K>());
+        this((Comparator<K>) new DefaultComparator<K>());
     }
 
     //compare two entries
